@@ -14,6 +14,7 @@ namespace Services.Services
         {
             _context = context;
         }
+
         public List<Customer> GetByFilters(string? name, string? documentNumber)
         {
             IQueryable<Customer> query = _context.Customers.Where(x => x.IsActive);
